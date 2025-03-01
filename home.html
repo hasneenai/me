@@ -11,7 +11,7 @@
             direction: rtl;
             margin: 0;
             padding: 0;
-            background: linear-gradient(-45deg, #2D9CDB, #56CCF2, #4A90E2);
+            background: linear-gradient(135deg, #4B0082, #1E90FF);
             background-size: 400% 400%;
             animation: gradientMove 8s ease infinite;
             color: white;
@@ -33,16 +33,8 @@
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
         }
 
-        /* تأثير اهتزاز خفيف للأزرار */
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-2px); }
-            50% { transform: translateX(2px); }
-            75% { transform: translateX(-2px); }
-        }
-
         .button {
-            background-color: #2D9CDB;
+            background-color: #ff7f50;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -54,7 +46,7 @@
         }
 
         .button:hover {
-            background-color: #1B7AC9;
+            background-color: #ff6347;
             animation: shake 0.3s ease-in-out;
         }
 
@@ -65,6 +57,21 @@
             margin-top: 30px;
             width: 100%;
             align-items: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #FFD700;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .category {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
 
         .teacher-card {
@@ -78,8 +85,7 @@
             justify-content: space-between;
             flex-wrap: wrap;
             margin: 15px auto;
-            width: 80%;
-            max-width: 600px;
+            width: 250px;
             transition: transform 0.3s ease-in-out;
         }
 
@@ -147,98 +153,63 @@
 </head>
 <body>
 
-    <div class="navbar"> منصة شمس التعليمية </div>
+    <div class="navbar">شاهد جميع القنواة مجاناً</div>
 
     <header>
-        <h1>مرحبًا بك في منصة شمس التعليمية</h1>
-        <p>مجانية بالكامل - تصميم وتطوير حسو ال علي</p>
+        <h1></h1>
+        <p><br>مجانية بالكامل - تصميم وتطوير حسو ال علي</p>
     </header>
 
     <div class="container">
-        <div class="teacher-card">
-            <img src="https://api.telegram.org/file/bot7870588893:AAFshq8Fi5Ikw8GhOpMM3NR-oMr_yF2Vdtw/photos/file_22.jpg" class="teacher-img" alt="نورس الموسوي">
-            <div class="teacher-info">
-                <p class="teacher-name">نورس الموسوي</p>
-                <p class="course-title">دورة الرياضيات 2025</p>
+        <div class="category">
+            <div class="teacher-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVUaBXPgxQ-7KlCsFqRlCJfmaetb1dDT57Rw&usqp=CAU" class="teacher-img" alt="MBC">
+                <div class="teacher-info">
+                    <p class="teacher-name">قنوات الــ mbc 2</p>
+                    <p class="course-title">جميع المسلسلات والافلام</p>
+                </div>
+                <button class="button" onclick="window.location.href='mbc.html'">الدخول</button>
             </div>
-            <button class="button" onclick="window.location.href='nn.html'">الدخول</button>
         </div>
 
-        <div class="teacher-card">
-            <img src="https://api.telegram.org/file/bot7870588893:AAFshq8Fi5Ikw8GhOpMM3NR-oMr_yF2Vdtw/photos/file_26.jpg" class="teacher-img" alt="حسين الهاشمي">
-            <div class="teacher-info">
-                <p class="teacher-name">حسين الهاشمي</p>
-                <p class="course-title">دورة الكيمياء 2025</p>
+        <div class="category">
+            <div class="teacher-card">
+                <img src="https://play-lh.googleusercontent.com/BDUySDHFzY4JcRzQpLsIHiZKLvIEmVL5N30qc-DWwVhwN3dJqV0J4BKE6XH9EOw_ygQ" class="teacher-img" alt="قناة رياضية">
+                <div class="teacher-info">
+                    <p class="teacher-name">قنوات بين سبورت</p>
+                    <p class="course-title">أخبار الرياضه</p>
+                </div>
+                <button class="button" onclick="window.location.href='sport.html'">الدخول</button>
             </div>
-            <button class="button" onclick="window.location.href='kk.html'">الدخول</button>
         </div>
 
-        <div class="teacher-card">
-            <img src="https://api.telegram.org/file/bot7870588893:AAFshq8Fi5Ikw8GhOpMM3NR-oMr_yF2Vdtw/photos/file_21.jpg" class="teacher-img" alt="حسن عبد الكاظم">
-            <div class="teacher-info">
-                <p class="teacher-name">حسن عبد الكاظم</p>
-                <p class="course-title">دورة الفيزياء 2025</p>
+        <div class="category">
+            <div class="teacher-card">
+                <img src="https://news.elbadil.com/wp-content/uploads/2025/01/%D8%AA%D8%B1%D8%AF%D8%AF-%D9%82%D9%86%D8%A7%D8%A9-CN-%D9%86%D8%AA%D9%88%D8%B1%D9%83-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9.jpg" class="teacher-img" alt="قناة كارتون">
+                <div class="teacher-info">
+                    <p class="teacher-name">قناة كارتون نتورك</p>
+                    <p class="course-title">أفضل أفلام وبرامج كارتون</p>
+                </div>
+                <button class="button" onclick="window.location.href='cartoon1.html'">الدخول</button>
             </div>
-            <button class="button" onclick="window.location.href='mm.html'">الدخول</button>
         </div>
 
-        <div class="teacher-card">
-            <img src="https://www.king-of-knowledge.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default-new_351734301485.jpg" class="teacher-img" alt="حيدر عبد الأئمة">
-            <div class="teacher-info">
-                <p class="teacher-name">حيدر عبد الأئمة</p>
-                <p class="course-title">دورة الرياضيات 2025</p>
+        <div class="category">
+            <div class="teacher-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUnqR6UezCEKkFKAfCitcqhG6J1Q5z0wUfFA&s" class="teacher-img" alt="جميع قنوات العراقيه">
+                <div class="teacher-info">
+                    <p class="teacher-name">جميع القنوات العراقيه</p>
+                    <p class="course-title">مسلسلات ، اذكار ، اخبار</p>
+                </div>
+                <button class="button" onclick="window.location.href='family1.html'">الدخول</button>
             </div>
-            <button class="button" onclick="window.location.href='hhhh.html'">الدخول</button>
         </div>
 
-        <div class="teacher-card">
-            <img src="https://d157djim0keagl.cloudfront.net/76c26858-4c62-47a5-ba8e-2ac359420814.webp" class="teacher-img" alt="ساجد العكيلي">
-            <div class="teacher-info">
-                <p class="teacher-name">ساجد العكيلي</p>
-                <p class="course-title">دورة التربية الإسلامية 2025</p>
-            </div>
-            <button class="button" onclick="window.location.href='sajed.html'">الدخول</button>
-        </div>
-
-        <div class="teacher-card">
-            <img src="https://api.telegram.org/file/bot7870588893:AAFshq8Fi5Ikw8GhOpMM3NR-oMr_yF2Vdtw/photos/file_17.jpg" class="teacher-img" alt="مويد سليم">
-            <div class="teacher-info">
-                <p class="teacher-name">مويد سليم</p>
-                <p class="course-title">دورة الفيزياء 2025</p>
-            </div>
-            <button class="button" onclick="window.location.href='hhhsch.html'">الدخول</button>
-        </div>
-
-        <div class="teacher-card">
-            <img src="https://d157djim0keagl.cloudfront.net/9ff0c09e-2f9b-42ca-a49b-facc40fc3141.webp" class="teacher-img" alt="هشام المعموري">
-            <div class="teacher-info">
-                <p class="teacher-name">هشام المعموري</p>
-                <p class="course-title">دورة خاصة 2025</p>
-            </div>
-            <button class="button" onclick="window.location.href='hosy.html'">الدخول</button>
-        </div>
-
-        <div class="teacher-card">
-            <img src="https://d157djim0keagl.cloudfront.net/8bfd0c12-4628-4e01-9c30-81d439415eb7.webp" class="teacher-img" alt="رفل الزبيدي">
-            <div class="teacher-info">
-                <p class="teacher-name">رفل الزبيدي</p>
-                <p class="course-title">دورة خاصة 2025</p>
-            </div>
-            <button class="button" onclick="window.location.href='rafel.html'">الدخول</button>
-        </div>
-
-        <div class="teacher-card">
-            <img src="https://www.king-of-knowledge.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default-new_371734380750.jpg" class="teacher-img" alt="هاشم الغرباوي">
-            <div class="teacher-info">
-                <p class="teacher-name">هاشم الغرباوي</p>
-                <p class="course-title">دورة الكيمياء 2025</p>
-            </div>
-            <button class="button" onclick="window.location.href='hachem.html'">الدخول</button>
-        </div>
     </div>
 
     <footer>
-        © 2025 منصة شمس التعليمية
+        © 2025 جميع الحقوق محفوظه 
     </footer>
+
 </body>
 </html>
