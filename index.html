@@ -188,7 +188,10 @@
         } else if ((userInput === storedUser || userInput === storedEmail) && password === storedPassword) {
             messageBox.className = "message-box success";
             messageText.textContent = "✅ تسجيل الدخول ناجح!";
-            setTimeout(() => { window.location.replace("home"); }, 2000);
+            setTimeout(function() {
+              window.location.replace("https://hasneenai.github.io/me/home");
+             
+            }, 2000);
         } else {
             messageBox.className = "message-box error";
             messageText.textContent = "❌ بيانات الدخول غير صحيحة!";
