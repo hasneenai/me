@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', Arial, sans-serif;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg, #2D9CDB, #56CCF2, #4A90E2);
+            background-size: 400% 400%;
+            animation: gradientMove 8s ease infinite;
+            color: white;
+            text-align: center;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            padding: 30px 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* تأثير اهتزاز خفيف للأزرار */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-2px); }
+            50% { transform: translateX(2px); }
+            75% { transform: translateX(-2px); }
+        }
+
+        .button {
+            background-color: #2D9CDB;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background-color: #1B7AC9;
+            animation: shake 0.3s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 30px;
+            width: 100%;
+            align-items: center;
+        }
+
+        .teacher-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 15px auto;
+            width: 80%;
+            max-width: 600px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .teacher-card:hover {
+            transform: scale(1.03);
+        }
+
+        .teacher-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            margin-right: 15px;
+        }
+
+        .teacher-info {
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        .teacher-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .course-title {
+            font-size: 1.1rem;
+            color: #f7f7f7;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .teacher-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .teacher-img {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar"> منصة شمس التعليمية </div>
+
+    <header>
+        <h1>مرحبًا بك في منصة شمس التعليمية</h1>
+        <p>مجانية بالكامل - تصميم وتطوير حسو ال علي</p>
+    </header>
+
+    <div class="container">
+        <div class="teacher-card">
+            <img src="https://api.telegram.org/file/bot7870588893:AAFshq8Fi5Ikw8GhOpMM3NR-oMr_yF2Vdtw/photos/file_22.jpg" class="teacher-img" alt="نورس الموسوي">
+            <div class="teacher-info">
+                <p class="teacher-name">نورس الموسوي</p>
+                <p class="course-title">دورة الرياضيات 2025</p>
+            </div>
+            <button class="button" onclick="window.location.href='nn.html'">الدخول</button>
+        </div>
+
+        <div class="teacher-card">
+            <img src="https://api.telegram.org/file/bot7870588893:AAFshq8Fi5Ikw8GhOpMM3NR-oMr_yF2Vdtw/photos/file_26.jpg" class="teacher-img" alt="حسين الهاشمي">
+            <div class="teacher-info">
+                <p class="teacher-name">حسين الهاشمي</p>
+                <p class="course-title">دورة الكيمياء 2025</p>
+            </div>
+            <button class="button" onclick="window.location.href='kk.html'">الدخول</button>
+        </div>
+
+        <div class="teacher-card">
+            <img src="https://api.telegram.org/file/bot7870588893:AAFshq8Fi5Ikw8GhOpMM3NR-oMr_yF2Vdtw/photos/file_21.jpg" class="teacher-img" alt="حسن عبد الكاظم">
+            <div class="teacher-info">
+                <p class="teacher-name">حسن عبد الكاظم</p>
+                <p class="course-title">دورة الفيزياء 2025</p>
+            </div>
+            <button class="button" onclick="window.location.href='mm.html'">الدخول</button>
+        </div>
+
+        <div class="teacher-card">
+            <img src="https://www.king-of-knowledge.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default-new_351734301485.jpg" class="teacher-img" alt="حيدر عبد الأئمة">
+            <div class="teacher-info">
+                <p class="teacher-name">حيدر عبد الأئمة</p>
+                <p class="course-title">دورة الرياضيات 2025</p>
+            </div>
+            <button class="button" onclick="window.location.href='hhhh.html'">الدخول</button>
+        </div>
+
+        <div class="teacher-card">
+            <img src="https://d157djim0keagl.cloudfront.net/76c26858-4c62-47a5-ba8e-2ac359420814.webp" class="teacher-img" alt="ساجد العكيلي">
+            <div class="teacher-info">
+                <p class="teacher-name">ساجد العكيلي</p>
+                <p class="course-title">دورة التربية الإسلامية 2025</p>
+            </div>
+            <button class="button" onclick="window.location.href='sajed.html'">الدخول</button>
+        </div>
+
+        <div class="teacher-card">
+            <img src="https://api.telegram.org/file/bot7870588893:AAFshq8Fi5Ikw8GhOpMM3NR-oMr_yF2Vdtw/photos/file_17.jpg" class="teacher-img" alt="مويد سليم">
+            <div class="teacher-info">
+                <p class="teacher-name">مويد سليم</p>
+                <p class="course-title">دورة الفيزياء 2025</p>
+            </div>
+            <button class="button" onclick="window.location.href='hhhsch.html'">الدخول</button>
+        </div>
+
+        <div class="teacher-card">
+            <img src="https://d157djim0keagl.cloudfront.net/9ff0c09e-2f9b-42ca-a49b-facc40fc3141.webp" class="teacher-img" alt="هشام المعموري">
+            <div class="teacher-info">
+                <p class="teacher-name">هشام المعموري</p>
+                <p class="course-title">دورة خاصة 2025</p>
+            </div>
+            <button class="button" onclick="window.location.href='hosy.html'">الدخول</button>
+        </div>
+
+        <div class="teacher-card">
+            <img src="https://d157djim0keagl.cloudfront.net/8bfd0c12-4628-4e01-9c30-81d439415eb7.webp" class="teacher-img" alt="رفل الزبيدي">
+            <div class="teacher-info">
+                <p class="teacher-name">رفل الزبيدي</p>
+                <p class="course-title">دورة خاصة 2025</p>
+            </div>
+            <button class="button" onclick="window.location.href='rafel.html'">الدخول</button>
+        </div>
+
+        <div class="teacher-card">
+            <img src="https://www.king-of-knowledge.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default-new_371734380750.jpg" class="teacher-img" alt="هاشم الغرباوي">
+            <div class="teacher-info">
+                <p class="teacher-name">هاشم الغرباوي</p>
+                <p class="course-title">دورة الكيمياء 2025</p>
+            </div>
+            <button class="button" onclick="window.location.href='hachem.html'">الدخول</button>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 منصة شمس التعليمية
+    </footer>
+</body>
+</html>
